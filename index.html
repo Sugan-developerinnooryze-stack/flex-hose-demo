@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flex-Hose Co. — LeadRyze AI Chatbot Demo</title>
+<meta name="description" content="LeadRyze AI chatbot integration demo built on Flex-Hose Co.'s real critical piping connections product catalog." />
+<link rel="icon" href="img/site/fh-icon.png" type="image/png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ UTILITY BAR ============ -->
+<div class="utility-bar">
+  <div class="container utility-bar-inner">
+    <a class="utility-phone" href="tel:18778743539">📞 1-877-TRI-FLEX (1-877-874-3539)</a>
+    <div class="utility-meta">
+      <a href="mailto:sales@flexhose.com">✉ sales@flexhose.com</a>
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER / MAIN NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <img src="img/site/flexhose-logo-and-tagline.png" alt="Flex-Hose Co. Inc." />
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#products" data-nav="products">Products</a></li>
+        <li><a href="#documents" data-nav="documents">Documents</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
+        <li><a href="#data-centers" data-nav="data-centers">Data Centers</a></li>
+        <li><a href="#software" data-nav="software">Software</a></li>
+        <li><a href="#faq" data-nav="faq">FAQ</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="searchToggle" aria-label="Search products">
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="btn btn-primary" id="openQuoteBtn">Request a Quote</button>
+      <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-flyout" id="searchFlyout">
+    <div class="container">
+      <input type="text" id="searchInput" placeholder="Search products… e.g. expansion loop, Tri-Flex, flanged, fire protection" autocomplete="off" />
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#top" class="mobile-close-target">Home</a>
+  <a href="#about" class="mobile-close-target">About</a>
+  <a href="#products" class="mobile-close-target">Products</a>
+  <a href="#documents" class="mobile-close-target">Documents</a>
+  <a href="#projects" class="mobile-close-target">Projects</a>
+  <a href="#data-centers" class="mobile-close-target">Data Centers</a>
+  <a href="#software" class="mobile-close-target">Software</a>
+  <a href="#faq" class="mobile-close-target">FAQ</a>
+  <a href="#contact" class="mobile-close-target">Contact</a>
+</div>
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+<main id="top">
+
+<div class="page-section active" id="page-home">
+  <!-- ============ HOME HERO SLIDER ============ -->
+  <section class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" style="background-image:url('img/site/worldofpiping.jpg')">
+      <div class="hero-slide-copy">
+        <h2>A world of difference in<br>critical piping connections since 1968.™</h2>
+        <a href="#products" class="btn btn-primary btn-lg">View Products</a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('img/site/assureflex-slide-1.jpg')">
+      <div class="hero-slide-copy">
+        <h2>Introducing AssureFlex® UL/FM Listed Solutions for Sprinkler Systems!</h2>
+        <a href="#products" class="btn btn-primary btn-lg" data-family="UL/FM-Listed Solutions for Fire Sprinkler Systems">View Products</a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('img/site/triloop.jpg')">
+      <div class="hero-slide-copy">
+        <h2>Fitting Tri-Loop® into your plans makes fitting your piping connections into tight spaces and tight budgets easy.</h2>
+        <button type="button" class="btn btn-primary btn-lg" data-view-product="Tri-Loop®">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('img/site/tri-flexhose.jpg')">
+      <div class="hero-slide-copy">
+        <h2>When you're making critical piping connections, nothing but Tri-Flex Loop® should go over your head.</h2>
+        <button type="button" class="btn btn-primary btn-lg" data-view-product="Tri-Flex Loop®">Learn More</button>
+      </div>
+    </div>
+    <button type="button" class="hero-arrow prev" id="heroPrev" aria-label="Previous slide">‹</button>
+    <button type="button" class="hero-arrow next" id="heroNext" aria-label="Next slide">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- ============ INTRO ============ -->
+  <section>
+    <div class="container intro">
+      <div class="intro-badge"><img src="img/site/made-in-the-usa-sm-crop.jpg" alt="Made in the USA" /></div>
+      <div class="intro-copy">
+        <span class="eyebrow">Since 1968</span>
+        <h2>Founded on Quality &amp; Pride in Workmanship</h2>
+        <p>Founded in 1968, Flex-Hose Co. roots began as a manufacturer of metal hose assemblies in Syracuse, NY, and developed a foundation based on the simple principles of quality and pride in workmanship. Now, over 50 years later, Flex-Hose still maintains and emphasizes those same basic principles in day-to-day operations, management directives, and overall corporate culture. Whether you are looking for a product to absorb vibration, reduce noise, address thermal growth, deal with seismic shift, or resolve pipe misalignment, Flex-Hose Co. can provide a quality, reliable solution to fit your needs.</p>
+        <a href="#contact" class="btn btn-outline">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY TILES ("Our Products") ============ -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Make</span>
+        <h2>Our Products</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO + CERTIFICATIONS ============ -->
+  <section>
+    <div class="container trust-row">
+      <div class="video-frame">
+        <img src="img/site/fhbldg1_0.jpg" alt="Flex-Hose Co. facility" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.55;" />
+        <div class="play-btn" id="videoPlayBtn" aria-hidden="true" style="position:relative;">▶</div>
+      </div>
+      <div>
+        <span class="eyebrow">Company Overview</span>
+        <h2>See Flex-Hose in Action</h2>
+        <p style="color:var(--gray-700);">From our Liverpool, NY headquarters to 14 stocking warehouses nationwide, watch how Flex-Hose engineers, manufactures, and ships critical piping connection solutions for the industries that can't afford downtime.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Trusted &amp; Tested</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="cert-row" id="certRow"></div>
+    </div>
+  </section>
+
+  <!-- ============ AI VS TRADITIONAL STORY ============ -->
+  <section class="bg-navy">
+    <div class="container ai-story-inner">
+      <div class="ai-story-col">
+        <span class="eyebrow eyebrow-light">The traditional way</span>
+        <ol class="ai-story-steps">
+          <li>Open the Products menu</li>
+          <li>Check seven Product Type filters</li>
+          <li>Scan Sub Category and Certification lists</li>
+          <li>Open each product page</li>
+          <li>Call sales for a spec sheet</li>
+        </ol>
+      </div>
+      <div class="ai-story-divider" aria-hidden="true">→</div>
+      <div class="ai-story-col ai-story-highlight">
+        <span class="eyebrow eyebrow-light">The LeadRyze AI way</span>
+        <p class="ai-story-quote">"I need something UL listed to protect a sprinkler line from seismic movement."</p>
+        <ol class="ai-story-steps">
+          <li>AI parses application + certification + intent</li>
+          <li>AI recommends AssureFlex® Seismic/Expansion Loops</li>
+          <li>AI answers technical questions instantly</li>
+          <li>AI captures a quote request</li>
+          <li>LeadRyze creates the CRM lead automatically</li>
+        </ol>
+        <button type="button" class="btn btn-primary" id="aiStoryTryBtn">Try the AI Assistant</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="page-section" id="about">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg11.jpg')"><h1>About Us</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="about-layout">
+        <div class="about-copy">
+          <span class="eyebrow">Anything Worth Doing is Worth Doing Right</span>
+          <h2>Why Flex-Hose</h2>
+          <p>"Here at Flex-Hose Company, we understand that no customer's requirements are exactly the same — and that our customer base is comprised of engineers, designers and construction contractors who are responsible for overseeing costs and quality related to the installation of piping systems to existing and newly constructed buildings.</p>
+          <p>That's why Flex-Hose Co. pays so much attention to the details of your experience. Our employees will greet you in such a way that says we truly care and appreciate the opportunity to meet your performance expectation. Flex-Hose Co. personnel have the technical training and ability to provide solutions for the most demanding application. Our support also extends through specific job analysis services, which recommends placement of product location in a piping system, perfectly integrating them into the overall theme of your project, saving you both time and money. This is the result of staying true to what is essentially right.</p>
+          <p>It's not very hard to understand why our customers seek innovation, long-term reliability, ease of installation, and extreme cost savings: It's a no-brainer. Not by coincidence, these very same characteristics have been part of the fabric of our business and products since 1968. Flex-Hose sets the standards for innovation and engineering brilliance with the Tri-Flex Loop®, quite literally the envy of the industry. Our renowned products are also backed by the best warranties in the business — and a commitment to quality that other manufacturers find easier to talk about than to duplicate.</p>
+          <p>Finally, Flex-Hose Company operates under a CSA-B51, Category D, quality plan. This plan is certified by TSSA (Technical Standards and Safety Authority) of Canada. We can apply CRN's to all products that we manufacture, for all Canadian Provinces. In addition to our quality plan we utilize welders trained, and third party tested, in accordance with Section IX of the ASME BPVC (Boiler and Pressure Vessel Code)."</p>
+
+          <h3>We Manufacture Products That Are Tested, Listed and/or Approved Under:</h3>
+          <ul class="approval-list">
+            <li>FM (Factory Mutual, fire protection)</li>
+            <li>IAPMO: NSF/ANSI 61 / 372 (National Sanitary Foundation / American National Standards Institute, for drinking water and no lead)</li>
+            <li>UL (Underwriters Laboratories, UL-213 22 for fire protection)</li>
+            <li>UL (Underwriters Laboratories, UL-536 for compressed and combustible gases)</li>
+            <li>Seismic application approval for New York City building codes</li>
+            <li>Seismic application approval for Los Angeles city codes</li>
+            <li>Massachusetts Board of Examiners, Plumbers and Gas Fitters</li>
+            <li>Operate under CSA B51 Quality Plan Authorized by TSSA (Technical Standards &amp; Safety Authority)</li>
+            <li>Compliant with IBC (International Building Code) sections 1613 and 1613.1</li>
+            <li>Compliant with ASCE/SEI (American Society of Civil Engineers) Standard 7-22</li>
+          </ul>
+
+          <div class="quote-block">
+            <p>"Anything worth doing, is worth doing right."</p>
+            <span>Phil Argersinger, CEO</span>
+          </div>
+        </div>
+        <div class="about-media">
+          <img src="img/site/flexhoseassembly_faves_12.jpg" alt="Flex-Hose welder at work in the Liverpool, NY facility" />
+        </div>
+      </div>
+
+      <div class="stock-map">
+        <span class="eyebrow">And We Stock Near You, For Maximum Responsiveness</span>
+        <h2>14 Stocking Warehouses Nationwide</h2>
+        <p style="max-width:640px;margin:0 auto 26px;color:var(--gray-700);">Whether your project is a new-build, retrofit, or renovation — we understand you need your Flex-Hose shipment in a timely fashion. That's why we've established stocking warehouses at strategically located points across the United States.</p>
+        <img src="img/site/flexhose-map-w-colorado.png" alt="Map of Flex-Hose stocking warehouse locations across the USA" />
+        <div class="stock-cities" id="stockCities"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT EXPLORER ============ -->
+  <section class="explorer bg-alt page-section" id="products">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg1_0.jpg')"><h1>Products</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="explorer-layout">
+        <aside class="filters" id="filtersPanel">
+          <div class="filters-head">
+            <h3>Filters</h3>
+            <button type="button" class="link-btn" id="clearFiltersBtn">Clear Filters</button>
+          </div>
+
+          <div class="filter-group">
+            <label>Product Type</label>
+            <div id="filterType"></div>
+          </div>
+          <div class="filter-group">
+            <label>Sub Category</label>
+            <div id="filterSub"></div>
+          </div>
+          <div class="filter-group">
+            <label>Certifications</label>
+            <div id="filterCert"></div>
+          </div>
+        </aside>
+
+        <div class="explorer-results">
+          <div class="explorer-toolbar">
+            <div class="explorer-count" id="resultsCount">Showing all products</div>
+            <div class="explorer-search">
+              <input type="text" id="explorerSearch" placeholder="Search within results…" />
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <p>No products match these filters.</p>
+            <button type="button" class="btn btn-outline" id="emptyResetBtn">Reset filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DATA CENTERS ============ -->
+  <section class="page-section" id="data-centers">
+    <div class="page-banner" style="background-image:url('img/site/data-centers.jpg')"><h1>Data Centers</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="dc-layout">
+        <div class="dc-copy">
+          <span class="eyebrow">Mission-Critical Infrastructure</span>
+          <h2>Today's Digital World Runs on Data Centers</h2>
+          <p style="color:var(--gray-700);">Massive facilities that never sleep. Flex-Hose supplies components for mission-critical systems including server cooling and backup power infrastructure. A data center houses computing, storage, and networking equipment operating continuously to support cloud platforms, financial systems, and healthcare resources — requiring highly controlled environments with redundant power, cooling systems, and fire protection, and the flexible connectors and vibration-isolation solutions that keep them running.</p>
+          <h3>Applications in Data Centers</h3>
+          <ul class="dc-app-list">
+            <li>Building separations meeting IBC/ASCE standards</li>
+            <li>Chilled water systems for server cooling</li>
+            <li>HVAC connections</li>
+            <li>Backup power systems</li>
+            <li>Vibration isolation for pumps and chillers</li>
+          </ul>
+          <h3 style="margin-top:22px;">Why Choose Flex-Hose</h3>
+          <ul class="dc-app-list">
+            <li>Engineering support — AutoCAD, thermal calculations, design assistance</li>
+            <li>24/7 reliability for constant operation</li>
+            <li>USA manufacturing with industry-leading warranties</li>
+            <li>Safety certifications — UL/FM-listed</li>
+            <li>Vibration and thermal control, leak-free cooling efficiency</li>
+          </ul>
+        </div>
+        <div>
+          <div class="dc-media"><img src="img/products/tri-flex-loop-FH-008.jpg" alt="Tri-Flex Loop installed in a mechanical room" /></div>
+          <div class="dc-featured" id="dcFeatured"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOFTWARE (VisuaLoop) ============ -->
+  <section class="bg-alt page-section" id="software">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg11.jpg')"><h1>Software</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="software-layout">
+        <div class="software-copy">
+          <span class="eyebrow">VisuaLoop™</span>
+          <h2>Visualize Expansion Loop Movement, Free</h2>
+          <p style="color:var(--gray-700);">VisuaLoop™ is an educational tool that gives users the ability to understand and visualize flexible expansion loop movements with ease.</p>
+          <ul>
+            <li>Select from four available flexible expansion loops</li>
+            <li>Move any leg in the x, y, or z axis</li>
+            <li>Access technical data for each configuration</li>
+          </ul>
+          <a href="https://apps.apple.com/us/app/visualoop/id1661572776" target="_blank" rel="noopener" class="appstore-badge"> Download on the App Store</a>
+        </div>
+        <div class="software-visual">
+          <div class="phone-mock">
+            <svg viewBox="0 0 200 280"><rect x="4" y="4" width="192" height="272" rx="18" fill="none" stroke="#fff" stroke-width="4" opacity="0.5"/><path d="M40 200 V120 a20 20 0 0 1 20 -20 h30 a20 20 0 0 1 20 20 v40 a20 20 0 0 0 20 20 h30" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><circle cx="40" cy="200" r="6" fill="#fff"/><circle cx="160" cy="160" r="6" fill="#fff"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="page-section" id="projects">
+    <div class="page-banner" style="background-image:url('img/site/uc_san_diego_1.png')"><h1>Projects</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <p class="projects-lede">Here are just a few of the projects in which Flex-Hose advanced piping technologies have been deployed. Contact us today to learn more about any of them and initiate a conversation about YOUR project!</p>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <div class="projects-list-table" id="projectsList"></div>
+    </div>
+  </section>
+
+  <!-- ============ DOCUMENTS ============ -->
+  <section class="bg-alt page-section" id="documents">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg2.jpg')"><h1>Documents</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="section-head">
+        <span class="eyebrow">Documentation</span>
+        <h2>Documents &amp; Submittals</h2>
+        <p>Technical specifications and submittal packages for every Flex-Hose product line.</p>
+      </div>
+      <div class="docs-table" id="docsTable"></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="page-section" id="faq">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg2.jpg')"><h1>FAQ</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="section-head">
+        <span class="eyebrow">Piping Movement 101</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="page-section" id="contact">
+    <div class="page-banner" style="background-image:url('img/site/fhbldg11.jpg')"><h1>Contact</h1></div>
+    <div class="container" style="margin-top:50px;">
+      <div class="section-head" style="max-width:760px;">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Contact Us or Request a Quote, Today!</h2>
+        <p style="color:var(--gray-700);">Our team provides speedy, thorough, accurate, and courteous responses to every inquiry.</p>
+      </div>
+      <div class="contact-layout" style="margin-bottom:20px;">
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="ci">📞</div>
+          <div><h4>Phone / Text</h4><p>1-877-TRI-FLEX (1-877-874-3539)<br>8:00 AM–5:00 PM EST</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="ci">✉</div>
+          <div><h4>Email</h4><p>sales@flexhose.com</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="ci">📍</div>
+          <div><h4>Headquarters</h4><p>4560 Buckley Road<br>Liverpool, NY 13088</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="ci">🏭</div>
+          <div><h4>14 Stocking Warehouses</h4><p>California, Florida, Illinois, New York, Ohio, Texas, Washington, Missouri &amp; Maryland</p></div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3 style="color:var(--navy);">Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="form-field"><label>First Name*</label><input required name="firstName" type="text" placeholder="Jane" /></div>
+            <div class="form-field"><label>Last Name*</label><input required name="lastName" type="text" placeholder="Smith" /></div>
+            <div class="form-field">
+              <label>Nature of Inquiry</label>
+              <select name="inquiry">
+                <option>General Inquiry</option>
+                <option>Employment Inquiry</option>
+                <option>Request a Quote</option>
+                <option>Application Support</option>
+                <option>Channel Partner Inquiry</option>
+                <option>Media Inquiry</option>
+              </select>
+            </div>
+            <div class="form-field"><label>Organization*</label><input required name="organization" type="text" placeholder="Acme Mechanical" /></div>
+            <div class="form-field"><label>Organization Website</label><input name="website" type="text" placeholder="www.example.com" /></div>
+            <div class="form-field"><label>Job Title</label><input name="jobTitle" type="text" placeholder="Project Engineer" /></div>
+            <div class="form-field"><label>Email*</label><input required name="email" type="email" placeholder="jane@company.com" /></div>
+            <div class="form-field"><label>Phone</label><input name="phone" type="tel" placeholder="(555) 123-4567" /></div>
+          </div>
+          <div class="form-field" style="margin-bottom:16px;">
+            <label>Comments / Questions</label>
+            <textarea name="comments" rows="4" placeholder="Tell us about your project…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+        <div class="form-success" id="contactSuccess" hidden></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (persistent on every page) ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="img/site/flexhose-logo-reversed.png" alt="Flex-Hose Co. Inc." />
+      <p>A world of difference in critical piping connections since 1968™. 4560 Buckley Road, Liverpool, NY 13088.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#products">Products</a>
+      <a href="#documents">Documents</a>
+      <a href="#software">Software</a>
+    </div>
+    <div class="footer-col">
+      <h4>Work</h4>
+      <a href="#projects">Projects</a>
+      <a href="#data-centers">Data Centers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:18778743539">1-877-TRI-FLEX</a>
+      <a href="mailto:sales@flexhose.com">sales@flexhose.com</a>
+      <span>4560 Buckley Road<br>Liverpool, NY 13088</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 Flex-Hose, Co. <a href="#">Terms and Conditions</a></span>
+      <span class="powered-by">⚡ Powered by <strong>LeadRyze AI</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="productModalOverlay">
+  <div class="modal modal-lg" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <button type="button" class="modal-close" data-close-modal>✕</button>
+    <div class="modal-body" id="productModalBody"></div>
+  </div>
+</div>
+
+<!-- ============ REQUEST QUOTE MODAL ============ -->
+<div class="modal-overlay" id="quoteModalOverlay">
+  <div class="modal modal-md" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <button type="button" class="modal-close" data-close-modal>✕</button>
+    <div class="modal-body">
+      <div class="modal-header-block">
+        <span class="modal-header-icon">✎</span>
+        <div>
+          <h3 id="quoteModalTitle">Request a Quote</h3>
+          <p class="modal-sub">Tell us what you need and a Flex-Hose sales representative will follow up.</p>
+        </div>
+      </div>
+      <form id="quoteForm">
+        <span class="form-section-label">Your Contact Info</span>
+        <div class="form-grid">
+          <div class="form-field"><label>First Name*</label><input required name="firstName" type="text" placeholder="Jane" /></div>
+          <div class="form-field"><label>Last Name*</label><input required name="lastName" type="text" placeholder="Smith" /></div>
+          <div class="form-field"><label>Company*</label><input required name="company" type="text" placeholder="Acme Mechanical" /></div>
+          <div class="form-field"><label>Phone</label><input name="phone" type="tel" placeholder="(555) 123-4567" /></div>
+          <div class="form-field" style="grid-column:1 / -1;"><label>Email*</label><input required name="email" type="email" placeholder="jane@company.com" /></div>
+        </div>
+        <span class="form-section-label">Project Details</span>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Product Type</label>
+            <select name="type" id="quoteType"><option value="">Select…</option></select>
+          </div>
+          <div class="form-field">
+            <label>Product</label>
+            <select name="product" id="quoteProduct"><option value="">Select…</option></select>
+          </div>
+          <div class="form-field"><label>Quantity</label><input name="quantity" type="number" min="1" placeholder="e.g. 12" /></div>
+          <div class="form-field"><label>Project Location</label><input name="location" type="text" placeholder="City, State" /></div>
+        </div>
+        <div class="form-field" style="margin-bottom:20px;">
+          <label>Message</label>
+          <textarea name="message" rows="3" placeholder="Additional requirements…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Quote Request</button>
+      </form>
+      <div class="form-success" id="quoteSuccess" hidden></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ IMAGE ZOOM LIGHTBOX ============ -->
+<div class="zoom-overlay" id="zoomOverlay">
+  <div class="zoom-topbar">
+    <span class="zoom-title" id="zoomTitle">Product Image</span>
+    <button type="button" class="zoom-close" id="zoomCloseBtn" aria-label="Close zoom view">✕</button>
+  </div>
+  <div class="zoom-stage" id="zoomStage">
+    <span class="zoom-hint" id="zoomHint">Scroll or pinch to zoom &middot; drag to pan &middot; double-click to reset</span>
+    <img src="" alt="" id="zoomImg" draggable="false" />
+  </div>
+  <div class="zoom-controls">
+    <button type="button" class="zoom-btn" id="zoomOutBtn" aria-label="Zoom out">−</button>
+    <span class="zoom-level" id="zoomLevel">100%</span>
+    <button type="button" class="zoom-btn" id="zoomInBtn" aria-label="Zoom in">+</button>
+    <button type="button" class="zoom-btn" id="zoomResetBtn" aria-label="Reset zoom" style="font-size:0.9rem;">⟲</button>
+  </div>
+</div>
+
+<!-- ============ TOASTS ============ -->
+<div class="toast-container" id="toastContainer"></div>
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<!-- LeadRyze AI Widget — replace data-widget-key with the real Flex-Hose tenant's widget key once configured in LeadRyze Admin > Widget Settings, then swap the src for the production URL below. -->
+<!-- <script src="https://leadryze-widget.onrender.com/loader.js" data-widget-key="REPLACE_WITH_FLEX_HOSE_WIDGET_KEY" async></script> -->
+<script src="http://localhost:5000/widget/loader.js" data-widget-key="wgt_66f2934f5854d34902d25bac03cfe6f8" async></script>
+</body>
+</html>
